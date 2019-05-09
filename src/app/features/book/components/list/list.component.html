@@ -1,1 +1,9 @@
-Do this.
+<!--Do this.-->
+<ul class="list-unstyled">
+  <li class="alert alert-info"
+      *ngFor="let book of books">
+    {{book.book}},
+    {{book.author}},
+    {{book.format}}
+  </li>
+</ul>

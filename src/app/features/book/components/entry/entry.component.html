@@ -1,9 +1,25 @@
 <div class="form-group">
-  <label>Item:</label>
+  <label>Book:</label>
   <input class="form-control"
          #item>
-  <input type="button"
-         (click)="add(item)"
-         value="Add Item"
-         class="btn btn-primary">
+  <label>Author:</label>
+  <input class="form-control"
+         #author>
+  <label>Format: </label>
+  <select #format>
+    <option value="hardbook">Hardbook</option>
+    <option value="paperback">Paperback</option>
+    <option value="ebook">E-Book</option>
+  </select>
+  <div>
+    <input type="button"
+           (click)="add(item)"
+           value="Add Item"
+           class="btn btn-primary">
+    <input type="button"
+           (click)="add(item)"
+           value="Remove Item"
+           class="btn btn-primary">
+  </div>
+
 </div>
