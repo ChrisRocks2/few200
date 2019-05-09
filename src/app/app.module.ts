@@ -20,6 +20,7 @@ import { CounterComponent } from './components/counter/counter.component';
 import { EffectsModule } from '@ngrx/effects';
 import { CounterEffects } from './effects/counter.effects';
 import { TodoModule } from './features/todo/todo.module';
+import { BookModule } from './features/book/book.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { TodoModule } from './features/todo/todo.module';
     LeftComponent,
     RightComponent,
     CounterComponent
+
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { TodoModule } from './features/todo/todo.module';
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([CounterEffects]),
-    TodoModule
+    TodoModule,
+    BookModule
   ],
   providers: [DataService, ShoppingDataService],
   bootstrap: [AppComponent]
