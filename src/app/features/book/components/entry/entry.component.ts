@@ -16,10 +16,10 @@ export class EntryComponent implements OnInit {
   ngOnInit() {
   }
 
-  add(item: HTMLInputElement) {
+  add(item: HTMLInputElement, item2: HTMLInputElement, item3: HTMLInputElement) {
     const book = item.value;
-    const author = item.value;
-    const format = item.value;
+    const author = item2.value;
+    const format = item3.value;
     this.store.dispatch(new AddedBook(book, author, format));
     item.value = '';
     item.focus();

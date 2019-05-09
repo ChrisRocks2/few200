@@ -21,6 +21,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { CounterEffects } from './effects/counter.effects';
 import { TodoModule } from './features/todo/todo.module';
 import { BookModule } from './features/book/book.module';
+import { BookEffects } from './features/book/effects/book.effects';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,8 @@ import { BookModule } from './features/book/book.module';
     StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([CounterEffects]),
     TodoModule,
-    BookModule
+    BookModule,
+    EffectsModule.forRoot([BookEffects])
   ],
   providers: [DataService, ShoppingDataService],
   bootstrap: [AppComponent]

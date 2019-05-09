@@ -4,22 +4,22 @@
          #item>
   <label>Author:</label>
   <input class="form-control"
-         #author>
+         #item2>
   <label>Format: </label>
-  <select #format>
+  <select #item3>
     <option value="hardbook">Hardbook</option>
     <option value="paperback">Paperback</option>
     <option value="ebook">E-Book</option>
   </select>
   <div>
     <input type="button"
-           (click)="add(item)"
+           (click)="add(item, item2, item3)"
            value="Add Item"
            class="btn btn-primary">
-    <input type="button"
-           (click)="add(item)"
+    <!-- <input type="button"
+           (click)="add(item, item2, item3)"
            value="Remove Item"
-           class="btn btn-primary">
+           class="btn btn-primary"> -->
   </div>
 
 </div>

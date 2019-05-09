@@ -16,7 +16,7 @@ export class EntryComponent implements OnInit {
   ngOnInit() {
   }
 
-  add(item: HTMLInputElement) {
+  add(item: HTMLInputElement, author: HTMLInputElement, format: HTMLInputElement) {
     const description = item.value;
     item.value = '';
     item.focus();
